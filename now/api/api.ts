@@ -13,10 +13,8 @@ const config: Config = {
       }
     },
     output: {
-      type: 'memory',
-      options: {
-        limit: 100,
-      },
+      type: 'none',
+      options: {}
     },
   },
   browserCache: `s-maxage=${ONE_DAY}`,
