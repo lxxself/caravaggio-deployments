@@ -1,0 +1,26 @@
+{
+  "name": "caravaggio-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline start",
+    "build": "rm -rf node_modules/sharp && npm install --arch=x64 --platform=linux sharp",
+    "deploy": "npm run build && sls deploy",
+    "deploy-quick": "sls deploy",
+    "production": "npm run build && sls deploy --stage production"
+  },
+  "keywords": [],
+  "author": "Fabrizio Ruggeri",
+  "license": "MIT",
+  "dependencies": {
+    "caravaggio": "^3.0.3",
+    "serverless-http": "^2.3.0",
+    "serverless-plugin-custom-binary": "^2.0.0",
+    "sharp": "^0.25.3"
+  },
+  "devDependencies": {
+    "serverless": "^1.68.0",
+    "serverless-offline": "^5.12.0"
+  }
+}

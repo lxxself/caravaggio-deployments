@@ -1,0 +1,35 @@
+# In case you have an organization on serverless platform, you may want to change this
+# org: <YOUR ORGANIZATION>
+app: caravaggio
+service: caravaggio
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-2
+
+functions:
+  app:
+    handler: lambda.handler
+    description: Image proxy through Caravaggio
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-custom-binary
+
+custom:
+  apiGateway:
+    binaryMediaTypes:
+      - 'image/jpeg'
+      - 'image/jpg'
+      - 'image/png'
+      - 'image/gif'
+      - 'image/tiff'
+      - 'image/webp'
+      - 'image/*'
+      - '*/*'
+ 
