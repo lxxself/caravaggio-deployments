@@ -7,6 +7,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
+  # Change the region to what fit best your requirements
   region: eu-west-2
 
 functions:
