@@ -4,7 +4,10 @@ This repository helps you deploy Caravaggio to AWS Labda using [serverless](http
 utility to do that. 
 In order to deploy caravaggio to AWS Lambda, you need credentials. You can find more informations on [serverless documentation](http://slss.io/aws-creds-setup).
 
-When you found your preferred way to setup your AWS credentials, run
+When you found your preferred way to setup your AWS credentials, rename the file `serverless.example.yml` to `serverless.yml` and change anything if needed.
+It works even without any modification if you don't need to specify your serverless organisation.
+
+Run.
 
 ```
 npm install
