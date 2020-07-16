@@ -18,7 +18,9 @@ const config: Config = {
     },
   },
   browserCache: `s-maxage=${ONE_DAY}`,
-  whitelist: [],
+  whitelist: process.env.CARAVAGGIO_DOMAIN_WHITELIST 
+    ? process.env.CARAVAGGIO_DOMAIN_WHITELIST.split(',').map(d => d.trim()) 
+    : [],
   errors: 'html',
   logger: {
     options: {
