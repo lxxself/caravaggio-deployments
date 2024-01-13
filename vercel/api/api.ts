@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import caravaggio from 'caravaggio';
 import { Config } from 'caravaggio/dist/config/default';
 
